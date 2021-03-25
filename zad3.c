@@ -38,7 +38,7 @@ int filedetail(char *dir, char *d_name){
 		int blksize = sb.st_size;
 		struct tm *tm = localtime(&sb.st_ctime);
 		printf("%s %2d %5d %d-%d-%d %02d:%02d %s\n",
-			perm, linkcnt, blksize, tm->tm_year+1900, tm->tm_mon, tm->tm_mday, tm->tm_hour, tm->tm_min, d_name);
+			perm, linkcnt, blksize, tm->tm_year+1900, tm->tm_mon+1, tm->tm_mday, tm->tm_hour, tm->tm_min, d_name);
 	}
 	return 0;
 }
